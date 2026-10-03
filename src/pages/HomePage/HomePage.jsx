@@ -10,7 +10,8 @@ function HomePage() {
   const [movies, setMovies] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
-  async function handleSearch(event) {
+  
+async function handleSearch(event) {
     event.preventDefault();
     setError(null)
     setIsLoading(true)

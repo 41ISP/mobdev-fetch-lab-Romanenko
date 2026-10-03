@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LikeButton from '../LikeButton/LikeButton';
 import './MovieCard.css';
 
@@ -5,7 +6,7 @@ function MovieCard({movie}) {
   const { Title, Year, Poster, Type }= movie
   return (
     <article className="movie-card">
-      <button type="button" className="movie-card__poster-button" aria-label={`Открыть страницу фильма ${Title}`}>
+      <Link to={`/movie/${movie.imdbID}`} classname = "movie-card__poster-button" aria-label={`Открыть страницу фильма ${Title}`}>
         {Poster !== "N/A" ? (
         <img
           className="movie-card__poster"
@@ -19,7 +20,7 @@ function MovieCard({movie}) {
        </div>
        )}
         <span className="movie-card__type">{Type}</span>
-      </button>
+      </Link>
       <div className="movie-card__like">
         <LikeButton />
       </div>
