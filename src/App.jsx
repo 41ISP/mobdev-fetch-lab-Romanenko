@@ -9,13 +9,15 @@ import AboutPage from './pages/AboutPage/AboutPage';
 function App() {
   return (
     <>
-  <Header />
-            <Routes>
-                <Route path="/" element={<HomePage/>} />
-                <Route path="/movie/:imdbID" element={<MovieDetailsPage />} />
-                <Route path="/about" element={<AboutPage />} />
-            </Routes>
-            <Footer />
+      <Header />
+      <main className="container" style={{ padding: '40px 0', minHeight: '60vh' }}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movie/:imdbID" element={<MovieDetailsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </main>
+      <Footer />
     </>
   );
 }

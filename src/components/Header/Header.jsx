@@ -5,10 +5,10 @@ function Header() {
   return (
     <header className="header">
       <div className="container header__inner">
-        <a href="#" className="header__logo">
+        <Link to="/" className="header__logo">
           <span className="header__logo-mark">OMDb</span>
           <span className="header__logo-sub">кинокаталог</span>
-        </a>
+        </Link>
 
         <nav className="header__nav">
   <NavLink
@@ -20,14 +20,14 @@ function Header() {
             : "header__nav-link"
     }
 >
-    Главная
-</NavLink>
+            Главная
+          </NavLink>
           <Link to="#" className="header__nav-link">
             Избранное
           </Link>
-          <Link to="#" className="header__nav-link">
-            О проекте
-          </Link>
+         <Link to="/about" className="header__nav-link">
+          О проекте
+        </Link>
         </nav>
       </div>
     </header>

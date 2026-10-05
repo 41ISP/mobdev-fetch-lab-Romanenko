@@ -1,10 +1,10 @@
 import './RatingBadge.css';
 
-function RatingBadge(source, value) {
+function RatingBadge({ source, value }) {
   return (
     <div className="rating-badge">
-      <span className="rating-badge__value">{source}</span>
-      <span className="rating-badge__source">{value}</span>
+      <span className="rating-badge__value">{value}</span>
+      <span className="rating-badge__source">{source}</span>
     </div>
   );
 }
