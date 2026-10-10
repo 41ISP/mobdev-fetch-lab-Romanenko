@@ -1,8 +1,9 @@
 import './SearchBar.css';
 
 function SearchBar({query, setQuery, onSearch}) {
-  const handleSubmit =  (event) => {
-    event.preventDefault()
+  const handleSubmit =(event) => {
+    event.preventDefault();
+    console.log("отправка");
     onSearch(event);
   }
   return (
@@ -14,8 +15,7 @@ function SearchBar({query, setQuery, onSearch}) {
           className="search-bar__input"
           placeholder="Например: Joker, Interstellar, Dune…"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+          onChange={(e) => setQuery(e.target.value)}/>
         <button type="submit" className="search-bar__button">Искать</button>
       </div>
     </form>
